@@ -64,6 +64,10 @@ const broadcastUpdate = () => {
   });
 };
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Car WebSocket Server');
+});
+
 // API để lấy thông tin các xe
 app.get('/cars', (req, res) => {
   res.json(cars);
