@@ -3,7 +3,7 @@ const cors = require('cors');
 const WebSocket = require('ws');
 const port = process.env.PORT || 3001;
 // Dữ liệu các xe (cars) sẽ lưu trữ trong bộ nhớ
-  const cars=[
+  let cars=[
         {
             id:1,title:'Tuyến A1-Xe 01',numberStudent:10,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa xuất phát',
             students:[{stt:1,name:'Luu Thinh Khang',class:'9C'},{stt:2,name:'Nguyễn văn An',class:'9A'},{stt:3,name:'Nguyễn văn An',class:'9A'},{stt:4,name:'Nguyễn văn An',class:'9A'},{stt:5,name:'Nguyễn văn An',class:'9A'},{stt:6,name:'Nguyễn văn An',class:'9A'},{stt:7,name:'Nguyễn văn An',class:'9A'},{stt:8,name:'Nguyễn văn An',class:'9A'},{stt:9,name:'Nguyễn văn An',class:'9A'},{stt:10,name:'Nguyễn văn An',class:'9A'}]
