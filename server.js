@@ -68,12 +68,16 @@ app.get('/', (req, res) => {
   res.send('Welcome to the Car WebSocket Server');
 });
 
+app.get('/reset', (req, res) => {
+  res.send('Welcome to the Car reset');
+});
+
 // API để lấy thông tin các xe
 app.get('/cars', (req, res) => {
   res.json(cars);
 });
 
-app.delete('/reset-diem-danh', (req, res) => {
+app.delete('/reset', (req, res) => {
   cars=[
     {
         id:1,title:'Tuyến A1-Xe 01',numberStudent:10,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa xuất phát',
