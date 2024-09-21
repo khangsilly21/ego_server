@@ -73,6 +73,52 @@ app.get('/cars', (req, res) => {
   res.json(cars);
 });
 
+app.delete('/reset-diem-danh', (req, res) => {
+  cars=[
+    {
+        id:1,title:'Tuyến A1-Xe 01',numberStudent:10,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa xuất phát',
+        students:[{stt:1,name:'Luu Thinh Khang',class:'9C'},{stt:2,name:'Nguyễn văn An',class:'9A'},{stt:3,name:'Nguyễn văn An',class:'9A'},{stt:4,name:'Nguyễn văn An',class:'9A'},{stt:5,name:'Nguyễn văn An',class:'9A'},{stt:6,name:'Nguyễn văn An',class:'9A'},{stt:7,name:'Nguyễn văn An',class:'9A'},{stt:8,name:'Nguyễn văn An',class:'9A'},{stt:9,name:'Nguyễn văn An',class:'9A'},{stt:10,name:'Nguyễn văn An',class:'9A'}]
+    },
+    {
+        id:2,title:'Tuyến B2- Xe 02',numberStudent:10,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa xuất phát',
+        students:[{stt:1,name:'pav',class:'9C'},{stt:2,name:'Nguyễn văn An',class:'9A'},{stt:3,name:'Nguyễn văn An',class:'9A'},{stt:4,name:'Nguyễn văn An',class:'9A'},{stt:5,name:'Nguyễn văn An',class:'9A'},{stt:6,name:'Nguyễn văn An',class:'9A'},{stt:7,name:'Nguyễn văn An',class:'9A'},{stt:8,name:'Nguyễn văn An',class:'9A'},{stt:9,name:'Nguyễn văn An',class:'9A'},{stt:10,name:'Nguyễn văn An',class:'9A'}]
+    },
+    {
+        id:3,title:'Tuyến C3-Xe 03',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+         students:[]
+    },
+    {
+      id:4,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+      students:[]
+  }, {
+    id:5,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+    students:[]
+}, {
+  id:6,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+  students:[]
+}, {
+id:7,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+students:[]
+}, {
+id:8,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+students:[]
+}, {
+id:9,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+students:[]
+}, {
+id:10,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+students:[]
+}, {
+id:11,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+students:[]
+}, {
+id:12,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+students:[]
+}
+]
+  res.status(200).send('Danh sách điểm danh đã được reset');
+});
+
 // API để cập nhật điểm danh
 app.put('/cars/:id/students/:studentId', (req, res) => {
   const { id, studentId } = req.params;
