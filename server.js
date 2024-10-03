@@ -5,43 +5,43 @@ const port = process.env.PORT || 3001;
 // Dữ liệu các xe (cars) sẽ lưu trữ trong bộ nhớ
   let cars=[
         {
-            id:1,title:'Tuyến A1-Xe 01',numberStudent:10,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa xuất phát',
-            students:[{stt:1,name:'Luu Thinh Khang',class:'9C'},{stt:2,name:'Nguyễn văn An',class:'9A'},{stt:3,name:'Nguyễn văn An',class:'9A'},{stt:4,name:'Nguyễn văn An',class:'9A'},{stt:5,name:'Nguyễn văn An',class:'9A'},{stt:6,name:'Nguyễn văn An',class:'9A'},{stt:7,name:'Nguyễn văn An',class:'9A'},{stt:8,name:'Nguyễn văn An',class:'9A'},{stt:9,name:'Nguyễn văn An',class:'9A'},{stt:10,name:'Nguyễn văn An',class:'9A'}]
+            id:1,title:'Tuyến A1-Xe 01',numberStudent:10,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa xuất phát',places:["Cẩm Điền", "Cẩm Phúc","Tân Trường","Nguyễn Huệ"],
+            students:[{stt:1,name:'Nguyễn Hà Vân Anh',class:'7B'},{stt:2,name:'Vương Ngọc Minh',class:'7B'},{stt:3,name:'Ng Hoàng Thuỳ Trang',class:'9A'},{stt:4,name:'Nguyễn Thị Ngọc Anh',class:'6B'},{stt:5,name:'Trần Đức Minh',class:'8A'},{stt:6,name:'Vũ Hồng Phong',class:'9A'},{stt:7,name:'Phạm Thảo Chi',class:'9A'},{stt:8,name:'Vũ Đình Minh Đức',class:'7B'},{stt:9,name:'Vũ Hồng Nhung',class:'7A'},{stt:10,name:'Nguyễn Phương Vy',class:'9D'}]
         },
         {
-            id:2,title:'Tuyến B2- Xe 02',numberStudent:10,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa xuất phát',
-            students:[{stt:1,name:'pav',class:'9C'},{stt:2,name:'Nguyễn văn An',class:'9A'},{stt:3,name:'Nguyễn văn An',class:'9A'},{stt:4,name:'Nguyễn văn An',class:'9A'},{stt:5,name:'Nguyễn văn An',class:'9A'},{stt:6,name:'Nguyễn văn An',class:'9A'},{stt:7,name:'Nguyễn văn An',class:'9A'},{stt:8,name:'Nguyễn văn An',class:'9A'},{stt:9,name:'Nguyễn văn An',class:'9A'},{stt:10,name:'Nguyễn văn An',class:'9A'}]
+            id:2,title:'Tuyến B2- Xe 02',numberStudent:10,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa xuất phát',places:["Ngọc Liên", "Cẩm Giàng", "Thạch Lỗi", "Cẩm Sơn","Nguyễn Huệ"],
+            students:[{stt:1,name:'Nguyễn Thanh Hoa',class:'9C'},{stt:2,name:'Trần Ngọc Hà My',class:'9A'},{stt:3,name:'Nguyễn Thanh Huyền',class:'8B'},{stt:4,name:'Trần Thị Mai Lan',class:'6A'},{stt:5,name:'Nguyễn Thị Thanh Vân',class:'8A'},{stt:6,name:'Nguyễn Danh Tuấn Hưng',class:'7D'},{stt:7,name:'Trần Bảo Lộc',class:'6D'},{stt:8,name:'Lê Chu Tuệ Nhi',class:'8C'},{stt:9,name:'Bùi Việt Anh',class:'6B'},{stt:10,name:'Nguyễn văn An',class:'9A'}]
         },
         {
-            id:3,title:'Tuyến C3-Xe 03',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+            id:3,title:'Tuyến C3-Xe 03',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',places:[],
              students:[]
         },
         {
-          id:4,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+          id:4,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành', places:[],
           students:[]
       }, {
-        id:5,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+        id:5,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',places:[],
         students:[]
     }, {
-      id:6,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+      id:6,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',places:[],
       students:[]
   }, {
-    id:7,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+    id:7,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',places:[],
     students:[]
 }, {
-  id:8,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+  id:8,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',places:[],
   students:[]
 }, {
-  id:9,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+  id:9,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',places:[],
   students:[]
 }, {
-  id:10,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+  id:10,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',places:[],
   students:[]
 }, {
-  id:11,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+  id:11,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',places:[],
   students:[]
 }, {
-  id:12,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',
+  id:12,title:'Tuyến XX - Xe 00',numberStudent:0,numberStudentAbsent:0,numberStudentOnLeave:0,state:'Chưa vận hành',places:[],
   students:[]
 }
     ]
